@@ -1,0 +1,6 @@
+# High level instructions for which tasks apply to which hosts
+- name: apply local configuration to servers listed in hosts
+  hosts: all
+  user: matt
+  roles:
+    - common
