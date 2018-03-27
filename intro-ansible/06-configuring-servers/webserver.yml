@@ -1,0 +1,7 @@
+# provide standard configuration for a Nginx server
+- name: basic but standard web server configuration
+    hosts: web
+    user: deployer
+    roles:
+      - web
+

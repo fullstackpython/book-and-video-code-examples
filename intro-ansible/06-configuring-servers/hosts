@@ -1,2 +1,5 @@
-[common]
-192.168.0.1
+[secure]
+192.168.1.1 ansible_python_interpreter=/usr/bin/python3
+
+[webserver]
+192.168.1.1 

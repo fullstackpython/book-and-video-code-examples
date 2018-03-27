@@ -1,0 +1,6 @@
+###
+# configures server and install our web app from source
+##
+- include: ubuntu.yml
+- include: letsencrypt.yml
+- include: nginx.yml

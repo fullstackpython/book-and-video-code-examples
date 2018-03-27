@@ -1,0 +1,7 @@
+# secure web server including lockdown root, firewalls, fail2ban
+- name: base security configuration
+    hosts: all
+    user: root
+    roles:
+      - security
+
