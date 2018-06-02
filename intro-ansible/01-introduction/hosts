@@ -1,0 +1,2 @@
+[common]
+206.189.233.46 ansible_python_interpreter=/usr/bin/python3

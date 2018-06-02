@@ -1,0 +1,10 @@
+# create directory on remote system if it doesn't exist
+- file:
+    path: /home/matt
+    state: directory
+    mode: 0755
+
+- file:
+    path: /home/matt/hello-ansible.md
+    state: touch
+    mode: 0655 
