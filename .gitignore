@@ -100,4 +100,4 @@ ENV/
 # mypy
 .mypy_cache/
 */*/deploy.retry
-
+*/flask-deploy/*.swp
