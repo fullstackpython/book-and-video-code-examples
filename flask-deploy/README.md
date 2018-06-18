@@ -19,5 +19,5 @@ book builds up the automation scripts progressively:
 * [16-databases](./16-databases): sets up PostgreSQL and Redis
 * [17-app-dependencies](./17-app-dependencies): installs Python packages into a virtualenv, establishes environment variables and syncs the app to the database
 * [18-wsgi-server](./18-wsgi-server): configures Supervisor to run the app with Green Unicorn
-* [19-task-queue](./19-task-queu): adds to the Supervisor configuration for Celery and Redis
+* [19-task-queue](./19-task-queue): adds to the Supervisor configuration for Celery and Redis
 * [20-continuous-integration](./20-continuous-integration): modifies the Ansible playbook so it does not prompt for SUDO password for CI server
