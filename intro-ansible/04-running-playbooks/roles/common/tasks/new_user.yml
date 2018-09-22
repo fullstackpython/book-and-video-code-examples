@@ -1,0 +1,24 @@
+###
+# establishes non-root user with sudo privileges
+##
+- name: Run equivalent of "apt-get update"
+  apt:
+    update_cache: yes
+
+- name: create a non-root group
+  group:
+    name: "deployers"
+    state: present
+
+- name: create non-root user
+  user:
+    name: "deployer"
+    group: "deployers"
+    shell: "/bin/bash"
+    state: present
+
+- name: add authorized_key to non-root user
+  authorized_key:
+    user: deployer
+    state: present
+    key: "/home/matt/first_playbook/first_playbook.pub"
