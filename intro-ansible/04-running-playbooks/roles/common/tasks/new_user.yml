@@ -21,4 +21,4 @@
   authorized_key:
     user: deployer
     state: present
-    key: "/home/matt/first_playbook/first_playbook.pub"
+    key: "{{ lookup('file', '/home/matt/first_playbook/first_playbook.pub') }}"
