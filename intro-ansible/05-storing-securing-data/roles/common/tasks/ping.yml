@@ -1,0 +1,6 @@
+# entry point for common playbook
+- name: ping remote server
+  ping:
+
+
+
