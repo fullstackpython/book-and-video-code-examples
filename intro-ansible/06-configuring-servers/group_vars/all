@@ -1,8 +1,8 @@
-deploy_group: deployers
 deploy_user: deployer
-ssh_dir: "/home/matt/"
-ssh_key_name: "do_deploy"
+deploy_group: deployers
+ssh_dir: "/home/matt/serverconfig/"
+ssh_key_name: "serverconfig"
 
-fqdn: "ansible.fullstackpython.com"
-web_serve_dir: "/var/www/html"
-ssl_cert_email: "matthew.makai@gmail.com"
+db_name: "chapter6"
+db_user: "{{ deploy_user }}"
+db_password: pleaseuseagoodpassword

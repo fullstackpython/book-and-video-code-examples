@@ -1,13 +1,4 @@
-###
-# establishes non-root user with sudo privileges
-##
-- name: update, upgrade packages install fail2ban
-  apt:
-    name: fail2ban
-    state: present
-    update_cache: yes
-
-
+# establish non-root user with sudo privileges
 - name: create a non-root group
   group:
     name: "{{ deploy_group }}"
