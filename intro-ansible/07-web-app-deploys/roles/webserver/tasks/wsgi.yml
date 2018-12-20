@@ -1,0 +1,23 @@
+# configures and runs WSGI server via Supervisor
+
+- name: ensure Supervisor is installed
+  apt: name=supervisor state=present update_cache=yes
+  become: yes
+
+- name: set Supervisor configuration
+  template: src=supervisor_app.conf.j2
+            dest=/etc/supervisor/conf.d/{{ app_name }}.conf
+  become: yes
+
+- name: stop Supervisor
+  service: name=supervisor state=stopped
+  become: yes
+
+- name: pause for configuration to take effect
+  pause: seconds=2
+
+- name: start Supervisor back up
+  service: name=supervisor state=started
+  become: yes
+  notify:
+    - restart nginx

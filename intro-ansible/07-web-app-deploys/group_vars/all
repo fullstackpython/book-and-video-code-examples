@@ -1,0 +1,23 @@
+deploy_user: deployer
+deploy_group: deployers
+ssh_dir: "/home/matt/flaskdeploy/"
+ssh_key_name: "flaskdeploy"
+
+db_name: "flaskdeploy"
+db_user: "{{ deploy_user }}"
+db_password: pleaseuseagoodpassword
+
+app_name: flaskdeploy
+fqdn: "www.ansibledeploymentexample.com"
+web_serve_dir: "/var/www/html"
+ssl_cert_email: "matthew.makai@gmail.com"
+
+wsgi_server_port: 8000
+sub_app_dir: "/home/{{ deploy_user }}/{{ app_name }}/app"
+
+app_dir: "/home/{{ deploy_user }}/{{ app_name }}"
+local_deploy_key_dir: "/home/matt/devel/flaskdeploy"
+code_repository: "ssh://git@github.com/fullstackpython/flask-git-dashboard.git"
+read_only_deploy_key_name: deploy_key
+
+venv_dir: "/home/{{ deploy_user }}/venv"

@@ -1,0 +1,7 @@
+[program:{{ app_name }}]
+command={{ venv_dir }}/bin/gunicorn app:app
+directory={{ app_dir }}
+user={{ deploy_user }}
+autostart=true
+autorestart=true
+redirect_stderr=true
