@@ -19,7 +19,7 @@
   become: yes
 
 - name: remove default Nginx configuration
-  file: name=/et/cnginx/sites-enabled/default state=absent
+  file: name=/etc/nginx/sites-enabled/default state=absent
   become: yes
 
 
